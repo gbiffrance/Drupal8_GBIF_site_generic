@@ -1,0 +1,5 @@
+gbifpublishers:
+  version: 1.x
+  css:
+    theme:
+      css/gbifpublishers-theme.css: {}

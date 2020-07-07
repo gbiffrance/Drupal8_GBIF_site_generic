@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Default theme implementation to print GBIF Publication text.
+ *
+ * Available variables (see gbifstats_theme in gbifstats.module):
+ *   - 'publisher_key'
+ *   - 'publisher_title'
+ *   - 'publisher_description'
+ *   - 'publisher_homepage'
+ *   - 'publisher_GBIF_page'
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="partenaire">
+    {% if publisher_key is empty is empty and publisher_title is empty and publisher_description is empty and publisher_homepage is empty and publisher_GBIF_page is empty %}
+        <h2>Partenaire inconnu</h2>
+        <p></p>
+        <p>Le partenaire renseigné est inconnu. Vérifiez le code uuid renseigné</p>
+    {% else %}
+        <h2>{{ publisher_title }}</h2>
+        <div class="partie_gauche col-sm-12 col-md-9">
+            <p class="partenaire_description"><strong>Description :</strong> {{ publisher_description }}</p>
+
+            <p> {{ publisher_datasets }}</p>
+
+            {% if publisher_datasets is not empty %}
+            <table class="partenaires_datasets">
+                    <tr><th>Jeu de données publié</th></tr>
+                {% for dataset in publisher_datasets %}
+                    <p> {{ dataset }}</p>
+
+                    {% if dataset|length > 0 and dataset.dataset_key|length > 0 and dataset.dataset_title|length > 0 %}
+                        <tr><td><a href="https://www.gbif.org/dataset/{{ dataset.dataset_key }}" target="_blank">{{ dataset.dataset_title }}</a></td></tr>
+                    {% elseif dataset|length > 0 %}
+                        <tr><td>Error : dataset unknow</td></tr>
+                    {% else %}
+                        <tr><td>Error : No datasets</td></tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+            {% endif %}
+
+        </div>
+        <div class="partie_droite col-sm-12 col-sm-3">
+            <p class="partenaire_lien"><a href="{{ publisher_homepage }}" target="_blank">Site du partenaire</a></p>
+            <p class="partenaire_lien"><a href="{{ publisher_GBIF_page }}" target="_blank">Site internet du GBIF.org</a></p>
+        </div>
+        {{ attach_library('gbifpublishers/gbifpublishers') }}
+    {% endif %}
+</div>

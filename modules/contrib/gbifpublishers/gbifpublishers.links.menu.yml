@@ -1,0 +1,5 @@
+gbifpublishers.form:
+  title: 'GBIF Publishers settings'
+  description: 'Configure settings for the GBIF Publishers module.'
+  route_name: gbifpublishers.form
+  parent: 'system.admin_config_development'

@@ -1,0 +1,27 @@
+.partenaire {
+    margin-top: 20px;
+}
+
+.partenaires_datasets {
+    margin: 20px;
+    width: 90%;
+}
+
+.partenaire_description {
+    margin-top: 20px;
+}
+
+th {
+    background-color: #B3A49D;
+    width: 300px;
+    border: 1px solid #B3A49D;
+}
+
+th, td {
+    padding: 20px !important;
+}
+
+.partenaire_lien,
+p.partenaire_lien:last-child{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,44 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function gbifpublishers_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+        case 'help.page.gbifpublishers':
+            return t('
+        <h2>GBIF Publishers page generator for Drupal.</h2>
+        <h3>Instructions</h3>
+        <p>Go to  <strong>/admin/config/development/gbifpublishers</strong> to put the informations (UUID of the country)</p>
+        <p>If you need, there\'s also a specific <em>display GBIF Publishers</em> permission.</p>
+        <h3>Attention</h3>
+        <p>Most bugs have been ironed out, holes covered, features added. But this module is a work in progress. Please report bugs and suggestions, ok?</p>
+      ');
+    }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function gbifpublishers_theme($existing, $type, $theme, $path) {
+    $variables = array(
+        'gbifpublisherspage' => array(
+            'variables' => array(
+                'uuid_code' => NULL,
+                'publisher_key' => NULL,
+                'publisher_title' => NULL,
+                'publisher_description' => NULL,
+                'publisher_homepage' => NULL,
+                'publisher_GBIF_page' => NULL,
+                'publisher_datasets' => NULL,
+            ),
+            'template' => 'gbifpublisherspage',
+        ),
+    );
+    return $variables;
+}
+
+

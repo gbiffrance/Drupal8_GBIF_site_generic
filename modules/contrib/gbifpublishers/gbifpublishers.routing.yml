@@ -1,0 +1,14 @@
+gbifpublishers.display:
+  path: 'partenaire/{publisher_key}'
+  defaults:
+    _controller: '\Drupal\gbifpublishers\Controller\GBIFPublishersController::display'
+  requirements:
+    _permission: 'display GBIF Publishers'
+
+gbifpublishers.form:
+  path: '/admin/config/development/gbifpublishers'
+  defaults:
+    _form: 'Drupal\gbifpublishers\Form\GBIFPublishersForm'
+    _title: 'GBIF Publishers settings'
+  requirements:
+    _permission: 'administer site configuration'

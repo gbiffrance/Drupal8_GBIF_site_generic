@@ -1,0 +1,6 @@
+simplenews_content_selection.admin:
+  path: '/admin/content/simplenews_content_selection'
+  defaults:
+    _controller: '\Drupal\simplenews_content_selection\Controller\SimplenewsContentSelectionAdminForm::buildForm'
+  requirements:
+    _permission: 'access students content'

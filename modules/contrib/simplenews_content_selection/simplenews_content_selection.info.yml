@@ -1,0 +1,13 @@
+name: 'Simplenews Content Selection'
+type: module
+description: 'Select Drupal content to create a newsletter'
+core: 8.x
+package: Mail
+dependencies:
+  - simplenews:simplenews
+configure: simplenews_content_selection.admin
+
+# Information added by Drupal.org packaging script on 2019-09-30
+version: '8.x-1.x-dev'
+project: 'simplenews_content_selection'
+datestamp: 1569841089

@@ -1,0 +1,12 @@
+name = Simplenews Content Selection Views Integration
+description = Integrate Simplenews Content Selection with Views and Views Bulk Operations
+core = 7.x
+package = Mail
+dependencies[] = views_bulk_operations
+dependencies[] = scs
+
+; Information added by Drupal.org packaging script on 2019-09-30
+version = "8.x-1.x-dev"
+core = "8.x"
+project = "simplenews_content_selection"
+datestamp = "1569841089"
