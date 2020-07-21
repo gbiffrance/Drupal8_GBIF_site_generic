@@ -708,6 +708,8 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  */
 $settings['trusted_host_patterns'] = [
    '^193\.50\.94\.183$',
+   'site-test.gbif.fr',
+   'www.site-test.gbif.fr'
 ];
 
 /**
