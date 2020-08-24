@@ -1342,6 +1342,14 @@ button.agree-button.eu-cookie-compliance-secondary-button {
 	margin-bottom: 20px;
 }
 
+.img-projet{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+}
+
 /*---------------       News list page     ---------------*/
 
 .view-actualites .article {
@@ -3032,6 +3040,12 @@ h4{
 		display:inline-block;
 	}
 
+	/*---------------		GBIF Action page		---------------*/
+
+	.field.field--name-field-animation-date.field--type-datetime.field--label-above.quickedit-field {
+		margin-top: 20px;
+	}
+
 	/*---------------		Nos Projets		---------------*/
 
 	#img-pres-gbif img {
@@ -3060,6 +3074,14 @@ h4{
 		bottom: 30%;
 	}
 
+	/*---------------		News Page		---------------*/
+
+	.field.field--name-field-validite.field--type-datetime.field--label-inline.quickedit-field {
+		padding: 20px 0px;
+		display: block;
+		clear: both;
+	}
+
 	/*---------------		Agenda		---------------*/
 
 	.date-heading {
@@ -3078,6 +3100,13 @@ h4{
 		margin-right:5%;
 		background:none !important;
 		position:absolute !important;
+	}
+
+	/*---------------		Event page		---------------*/
+
+	.field--name-field-evenement-lieu div,
+	.field--name-field-evenement-date div {
+		display:inline;
 	}
 
 	/*---------------		Statistiques		---------------*/
@@ -3143,6 +3172,17 @@ h4{
 	.file.file--mime-application-pdf.file--application-pdf.icon-before{
 		margin-top: 20px;
 		margin-bottom: 50px;
+	}
+
+	/*---------------		Présentation		---------------*/
+
+	.views-label-field-presentation-lieu,
+	.views-field-field-presentation-lieu div,
+	.views-label-field-presentation-date,
+	.views-field-field-presentation-date div,
+	.views-label-field-evenement-nom,
+	.views-field-field-evenement-nom div {
+		display: inline;
 	}
 
 	/*---------------		Publication		---------------*/

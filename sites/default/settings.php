@@ -266,7 +266,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '6kUCAvamB4B-NVbLZygWd5ntUCO-aKp_4kFzAlDNQPjBgsUnR4SJTagZ0ZcJzjak3oOAqfR7sA';
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -706,11 +706,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
  */
-$settings['trusted_host_patterns'] = [
-   '^193\.50\.94\.183$',
-   'site-test.gbif.fr',
-   'www.site-test.gbif.fr'
-];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -760,14 +755,3 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'drupal_8_generique',
-  'username' => 'root',
-  'password' => 'gbif',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_errvQUoKXmx7fSeReEGqipeVrndfx5z-QhPlKPgsB-zr2X01_QOkI2hQiZQ-2HAfgKZVc-D2UA/sync';
