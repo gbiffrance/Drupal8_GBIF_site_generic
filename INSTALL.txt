@@ -1,3 +1,43 @@
+Instructions d'installation :
+-----------------------------
 
-Please read core/INSTALL.txt for detailed installation instructions for your
-Drupal web site.
+0 - Vérifier que les services suivants sont installer là où vous souhaitez installé votre Drupal :
+  apache
+  PHP
+  php-curl
+  MySQL
+
+1 - Installer ce dossier dans votre serveur au niveau de l'arborescence voulue
+
+2 - crée une base de données nommé drupal_8_generique, récupérer le fichier BDD-drupal_GBIF_ite_generic.sql et l'utiliser pour remplir cette base
+
+3 - Suivez les instructions du fichier core/INSTALL.txt pour lancer l'installation du Drupal
+
+3,a - Si jamais les permissions et groupes des fichiers sont ré-initialisé ou différentes lors de l'installation sur le serveur, lancer (en mode sudo) :
+bash debut_installation_drupal.bash
+
+3 - une fois l'installation terminé, executé (en mode sudo) :
+bash fin_installation_drupal.bash
+
+==============================================================================================
+
+Installation instruction :
+--------------------------
+
+0 - Check that the following services are availables ont your installation:
+  apache
+  PHP
+  php-curl
+  MySQL
+
+1 - Install this folder in your server
+
+2 - create a database named drupal_8_generique, and import data using the BDD-drupal_GBIF_ite_generic.sql file
+
+3 - read core/INSTALL.txt for detailed installation instructions for your Drupal web site
+
+3,a - if the files group and permission are reset, then execute the following (in sudo mode) :
+bash debut_installation_drupal.bash
+
+3 - when the install is finish, execute the following (in sudo mode) :
+bash fin_installation_drupal.bash
